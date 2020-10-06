@@ -1,0 +1,33 @@
+<mvc:View controllerName="poc.ZEmailbroadcast.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell" xmlns:f="sap.ui.layout.form">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Send Email" labelSpanXL="3" labelSpanL="3"
+							labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+							columnsL="1" columnsM="1" singleContainerFullSize="false">
+							<f:content>
+								<Label text="Subject" required="true"/>
+								<Input id="txtSubject" type="Text" />
+								<Label text="Description" required="true"/>
+								<TextArea id="txtbody" rows="5"/>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+					</content>
+					<footer>
+					<OverflowToolbar>
+						<content>
+							<ToolbarSpacer/>
+							<Button id="btnSend" text="Send Email" visible="true" icon="sap-icon://email" press="onSendEmail" type="Emphasized" tooltip="Save"/>
+							
+						</content>
+					</OverflowToolbar>
+				</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
